@@ -139,7 +139,7 @@
 
                     <!-- |Start Site Status Block| -->
                     <div class="charts--thread-status charts--breakdown">
-                        <h2>IDGAFF</h2>
+                        <h2>idgaff</h2>
                         <canvas id="idgaff"></canvas>
                     </div>
                     <script>
@@ -150,12 +150,12 @@
                             .then((response) => response.json())
                             .then((siteData) => {
                                 //set overall variables
-                                let siteName = 'site name from sheet';
+                                let siteName = 'idgaff';
                                 let siteObject = siteName !== 'all' ? siteData.filter(item => item.Site === siteName) : siteData;
                                 let threadStats = createThreadStats(threadData, siteObject, siteName, siteData);
 
                                 /*Thread Status*/
-                                new Chart(document.getElementById('siteidfromsheet'), {
+                                new Chart(document.getElementById('idgaff'), {
                                     ...chartOptions,
                                     data: {
                                         labels: threadStats[0].status.tags.map(item => item.toUpperCase()),
@@ -172,7 +172,7 @@
 
                     <!-- |Start Site Status Block| -->
                     <div class="charts--thread-status charts--breakdown">
-                        <h2>DRAG PATH</h2>
+                        <h2>drag path</h2>
                         <canvas id="dp"></canvas>
                     </div>
                     <script>
@@ -183,12 +183,12 @@
                             .then((response) => response.json())
                             .then((siteData) => {
                                 //set overall variables
-                                let siteName = 'site name from sheet';
+                                let siteName = 'drag path';
                                 let siteObject = siteName !== 'all' ? siteData.filter(item => item.Site === siteName) : siteData;
                                 let threadStats = createThreadStats(threadData, siteObject, siteName, siteData);
 
                                 /*Thread Status*/
-                                new Chart(document.getElementById('siteidfromsheet'), {
+                                new Chart(document.getElementById('dp'), {
                                     ...chartOptions,
                                     data: {
                                         labels: threadStats[0].status.tags.map(item => item.toUpperCase()),
